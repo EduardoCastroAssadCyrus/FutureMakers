@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FutureMakers</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    h1 {
+      font-size: 5rem;
+    }
+
+    h2 {
+      font-size: 3.5rem;
+    }
+
+    .navbar-azulclaro {
+      background-color: #3E6796;
+    }
+
+    .bg-azulpardo {
+      background-color: #112E50;
+    }
+
+    .bg-azulescuro {
+      background-color: #08192C;
+    }
+
+    body {
+      font-family: 'Rubik';
+    }
+
+    .btn-custom {
+      background-color: #e0e0e0;
+      color: black;
+      border: none;
+      padding: 20px 40px;
+      border-radius: 55px;
+      text-transform: uppercase;
+      font-size: 1.8rem;
+      font-weight: bold;
+      transition: transform 0.3s;
+    }
+
+    .btn-custom:hover {
+      background-color: #e0e0e0;
+      color: #000000;
+      transform: scale(1.1);
+    }
+
+    .btn-circulo {
+      border-radius: 55px;
+    }
+
+    .espasamento-cima {
+      margin-top: 16rem;
+    }
+
+    .card-foda {
+      background-color: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(5px);
+      border: white;
+      color: black;
+    }
+
+    .card-img-top {
+      padding: 5px;
+    }
+
+    .btn-verde {
+      background-color: #02A676;
+      color: white
+    }
+
+    .btn-verde:hover {
+      background-color: #016c4c;
+      color: white
+    }
+
+    .btn-verde:active {
+      background-color: #016c4c;
+
+    }
+  </style>
+</head>
+
+<body class="bg-azulescuro">
+  <form action="/menu" method="GET">
+    <img src="images/menu plano de fundo.png" alt="Background" class="position-fixed w-100 h-100 top-0 start-0"
+      style="object-fit: cover; z-index: -1;">
+    <nav class="navbar navbar-light d-flex justify-content-between navbar-azulclaro text-white p-3">
+      <div class="container">
+        <a class="navbar-brand text-white fs-4" href="/menu">FutureMakers</a>
+        <div class="d-flex flex-row">
+          <a class="nav-link fs-5 p-2" href="/menu">Início</a>
+          <a class="nav-link fs-5 p-2" href="/AI">Consulte nossa IA</a>
+          <a class="nav-link fs-5 p-2" href="/sobrenos">Quem somos</a>
+          <a class="nav-link fs-5 p-2" href="/contato">Contato</a>
+          <a class="nav-link fs-5 p-2" href="/cursos">Cursos</a>
+          <a class="nav-link fs-5 p-2" href="/conta">Minha conta</a>
+        </div>
+      </div>
+    </nav>
+
+
+
+    <div class="text-white text-center mt-5">
+      <h1>Na future makers, seu futuro profissional começa no agora!</h1>
+      <a class="btn btn-custom mt-3 btn-expandir" href="/AI">Descubra-se</a>
+    </div>
+
+
+
+    <section class="espasamento-cima">
+      <div class="container text-center">
+        <h2 class="mb-4 text-white">Nossos cursos</h2>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card areas-card card-foda">
+              <img src="images/Programação.jpg" class="card-img-top">
+              <div class="card-body text-white">
+                <h5 class="card-title">Introdução a Tecnologia</h5>
+                <p class="card-text">Nesse curso voce tera diferentes modulos focados em areas como programação,
+                  robotica,
+                  analise de sistemas, redes e até segurança digital, tudo com uma didatica pronta para pessoas
+                  novas
+                  na
+                  area.</p>
+                <a href="/tecnologia" class="btn btn-verde btn-circulo">Mais Detalhes</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card areas-card card-foda">
+              <img src="images/Artes.jpg" class="card-img-top">
+              <div class="card-body text-white">
+                <h5 class="card-title">Introdução a Artes</h5>
+                <p class="card-text">Neste curso, você terá uma introdução abrangente às principais áreas
+                  das artes, com módulos de teatro, música, pintura clássica e arte digital. Ideal para
+                  quem deseja explorar sua criatividade e entender os fundamentos artísticos de forma
+                  prática e acessível.</p>
+                <a href="/artes" class="btn btn-verde btn-circulo">Mais Detalhes</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card areas-card card-foda">
+              <img src="images/Medicina.png" class="card-img-top">
+              <div class="card-body text-white">
+                <h5 class="card-title">Introdução à Medicina</h5>
+                <p class="card-text">Aqui voce vai encontrar modulos relacionadoa a Enfermeiro, Cuidador, Terapeuta
+                  ocupacional, Fermaceutico</p>
+                <a href="/medicina" class="btn btn-verde btn-circulo">Mais Detalhes</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card areas-card card-foda">
+              <img src="images/Educação Física_ tudo sobre o curso.png" class="card-img-top">
+              <div class="card-body text-white">
+                <h5 class="card-title">Introdução aos Esportes</h5>
+                <p class="card-text">Aqui voce ira encontrar modulos como o de Personal trainer, Fisioterapeuta,
+                  Tecnico,
+                  Gestor de qualidade</p>
+                <a href="/esportes" class="btn btn-verde btn-circulo">Mais Detalhes</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card areas-card card-foda">
+              <img src="images/Marketing.jpg" class="card-img-top">
+              <div class="card-body text-white">
+                <h5 class="card-title">Introdução a Marketing e Comunicação</h5>
+                <p class="card-text">Aqui voce ira encontrar modulos a respeito de Fundamentos do Marketing e da
+                  Comunicação, Brading e ao fim ira aprender como fazer e interpretar pesquisas de mercado</p>
+                <a href="/marketing" class="btn btn-verde btn-circulo">Mais Detalhes</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card areas-card card-foda">
+              <img src="images/Gamedesing.png" class="card-img-top">
+              <div class="card-body text-white">
+                <h5 class="card-title">Introdução ao Desenvolvimento de Jogos</h5>
+                <p class="card-text">Aqui voce tera modulos como o de game design, pixel art, criação de
+                  soundtracks,
+                  introdução ao uso de engines e como publicar um jogo.</p>
+                <a href="/jogos" class="btn btn-verde btn-circulo">Mais Detalhes</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center">
+        <img src="Images/Frame.png">
+      </div>
+    </section>
+  </form>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+<footer class="text-center p-4 bg-azulpardo">
+  <h3 class="mb-1 text-white">Quer conhecer mais sobre nossa equipe?</h3>
+  <a href="/sobrenos" class="btn btn-primary btn-circulo">Saiba mais</a>
+</footer>
+
+</html>

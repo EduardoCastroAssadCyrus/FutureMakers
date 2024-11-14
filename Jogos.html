@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FutureMakers</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .section-header {
+            font-size: 4rem;
+            font-weight: bold;
+        }
+
+        h1 {
+            font-size: 5rem;
+        }
+
+        p {
+            font-size: 1.8rem;
+            line-height: 1.8;
+        }
+
+        .divider-icon {
+            margin: 30px 0;
+        }
+
+        .box {
+            background-color: #e0e0e0;
+            color: black;
+            padding: 40px;
+            border-radius: 10px;
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        .timeline li {
+            font-size: 2rem;
+            margin: 0 30px;
+        }
+
+        h4 {
+            font-size: 3rem;
+        }
+
+        .btn-custom {
+            background-color: #e0e0e0;
+            color: black;
+            border: none;
+            padding: 20px 40px;
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        .navbar-azulclaro {
+            background-color: #3E6796;
+        }
+
+        .bg-azulpardo {
+            background-color: #112E50;
+        }
+
+        body {
+            font-family: 'Rubik';
+        }
+
+        .bg-azulescuro {
+            background-color: #08192C;
+        }
+
+        .btn-expandir {
+            transition: transform 0.3s;
+        }
+
+        .btn-expandir:hover {
+            transform: scale(1.1);
+        }
+
+        .bg-foda {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .bg-foda img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+
+        .texto-sobre-abuso-do-bg {
+            position: relative;
+            z-index: 1;
+            color: white;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+            .frame {
+            position: absolute;
+            top: 85%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 3; 
+            width: 145px; 
+            height: 145px; 
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body class="text-white">
+    <form action="/jogos" method="GET">
+        <nav class="navbar navbar-light d-flex justify-content-between navbar-azulclaro text-white p-3">
+            <div class="container">
+                <a class="navbar-brand text-white fs-4" href="/menu">FutureMakers</a>
+                <div class="d-flex flex-row">
+                    <a class="nav-link fs-5 p-2" href="/menu">Início</a>
+                    <a class="nav-link fs-5 p-2" href="/AI">Consulte nossa IA</a>
+                    <a class="nav-link fs-5 p-2" href="/sobrenos">Quem somos</a>
+                    <a class="nav-link fs-5 p-2" href="/contato">Contato</a>
+                    <a class="nav-link fs-5 p-2" href="/cursos">Cursos</a>
+                    <a class="nav-link fs-5 p-2" href="/conta">Minha conta</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="bg-azulescuro">
+
+
+            <div class="row  bg-foda">
+                <img src="Images/Untitled-design-10-1.png">
+                <div class="col-md-6 texto-sobre-abuso-do-bg mx-3">
+                    <h4>Introdução a...</h4>
+                    <h1>Jogos</h1>
+                    <p>Um curso para quem sonha em criar jogos, com módulos que cobrem desde game design, pixel art, criação de trilhas sonoras, introdução às engines até publicação de jogos. Ideal para criativos que desejam entender todas as etapas do desenvolvimento de jogos.</p>
+                </div>
+                <div class="text-center frame">
+                    <img src="Images/Frame.png">
+                </div>
+            </div>
+            <h1 class="mx-3">Programação</h1>
+            <div class="text-center p-4">
+                <img src="Images/jogos.png">
+            </div>
+
+
+            <div class="row p-4">
+                <div class="col-md-6">
+                    <div class="box">
+                        <h4>Horários da manhã</h4>
+                        <ul>
+                            <li>segunda, 09:00 até 13:00</li>
+                            <li>quarta, 09:00 até 13:00</li>
+                            <li>sexta, 09:00 até 13:00</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="box">
+                        <h4>Horários da noite</h4>
+                        <ul>
+                            <li>segunda, 18:00 até 22:00</li>
+                            <li>quarta, 18:00 até 22:00</li>
+                            <li>sexta, 18:00 até 22:00</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="text-center">
+                <img src="Images/jogos.png" class="divider-icon">
+            </div>
+
+
+            <div class="text-center p-4 bg-azulpardo">
+                <h3>Ficou interessado?</h3>
+                <button class="btn-custom mt-3 btn-expandir">Inscreva-se já</button>
+            </div>
+
+        </div>
+
+
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

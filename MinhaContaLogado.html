@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Conta</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .navbar-azulclaro {
+            background-color: #3E6796;
+        }
+
+        body {
+            font-family: 'Rubik';
+        }
+
+        .bg-azulescuro {
+            background-color: #08192C;
+        }
+
+        .bg-azulpardo {
+            background-color: #112E50;
+        }
+
+        .btn-warning:hover {
+            background-color: #d9a300;
+            color: black
+        }
+
+        .btn-danger:hover {
+            background-color: #9b2531;
+            color: white
+        }
+
+        .btn-dark:hover {
+            background-color: #2f3539;
+            color: white
+        }
+
+        .btn-verde {
+            background-color: #02A676;
+            color: white
+        }
+
+        .btn-verde:hover {
+            background-color: #016c4c;
+            color: white
+        }
+
+        .btn-verde:active {
+            background-color: #016c4c;
+        }
+
+        .d-none {
+            display: none;
+        }
+
+        .card {
+            width: 35%;
+        }
+
+        .btn-que-nem-minha-rola {
+            width: 100%;
+        }
+
+        .btn-que-nem-minha-rola-2 {
+            padding: 5px 10px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body class="bg-azulescuro text-white">
+    <form action="/contalogado" method="GET">
+        <nav class="navbar navbar-light d-flex justify-content-between navbar-azulclaro text-white p-3">
+            <div class="container">
+                <a class="navbar-brand text-white fs-4" href="/menu">FutureMakers</a>
+                <div class="d-flex flex-row">
+                    <a class="nav-link fs-5 p-2" href="/menu">Início</a>
+                    <a class="nav-link fs-5 p-2" href="/AI">Consulte nossa IA</a>
+                    <a class="nav-link fs-5 p-2" href="/sobrenos">Quem somos</a>
+                    <a class="nav-link fs-5 p-2" href="/contato">Contato</a>
+                    <a class="nav-link fs-5 p-2" href="/cursos">Cursos</a>
+                    <a class="nav-link fs-5 p-2" href="/conta">Minha conta</a>
+                </div>
+            </div>
+        </nav>
+        <div class="container my-5">
+            <h2 class="mb-4 text-center">Minha Conta</h2>
+            <div class="d-flex justify-content-center">
+                <div class="card">
+                    <div class="card-body bg-azulpardo text-white">
+
+                        <div class="d-flex justify-content-center align-items-center mb-3">
+                            <h1>Detalhes da Conta</h1>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center mb-3">
+                            <div>
+                                <div class="mb-4">
+                                    <h4>Usuário:</h4>
+                                    <span id="usuario-display"></span>
+                                    <input type="text" id="usuario-input" class="d-none" />
+                                    <button id="usuario-button" class="btn btn-verde btn-que-nem-minha-rola-2 ms-2"
+                                        type="button" onclick="toggleEdit('usuario')">Editar</button>
+                                </div>
+
+
+                                <div class="mb-4">
+                                    <h4>Email:</h4>
+                                    <span id="email-display"></span>
+                                    <input type="text" id="email-input" class="d-none" />
+                                    <button id="email-button" class="btn btn-verde btn-que-nem-minha-rola-2 ms-2"
+                                        type="button" onclick="toggleEdit('email')">Editar</button>
+                                </div>
+
+                                <div class="mb-4">
+                                    <h4>Telefone:</h4>
+                                    <span id="telefone-display"></span>
+                                    <input type="text" id="telefone-input" class="d-none" />
+                                    <button id="telefone-button" class="btn btn-verde btn-que-nem-minha-rola-2 ms-2"
+                                        type="button" onclick="toggleEdit('telefone')">Editar</button>
+                                </div>
+                                <div class="mb-4">
+                                    <h4>Assinatura:</h4>
+                                    <span id="assinante-display"></span>
+                                </div><br>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <div class="d-flex flex-column">
+                                <div>
+                                    <a href="/Logout" class="btn btn-dark btn-que-nem-minha-rola mb-2">Logout</a>
+                                </div>
+                                <div>
+                                    <button type="button" class="btn btn-que-nem-minha-rola btn-warning mb-2 "
+                                        onclick="assinaturaCancel()">Cancelar
+                                        assinatura</button>
+                                </div>
+                                <div>
+                                    <a href="/deleteuser" class="btn btn-que-nem-minha-rola btn-danger">Deletar sua
+                                        conta</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        async function fetchUserData() {
+            try {
+                const usuarioResponse = await fetch('/usuario');
+                const emailResponse = await fetch('/email');
+                const telefoneResponse = await fetch('/telefone');
+                const assinanteResponse = await fetch('/assinante');
+
+                if (!usuarioResponse.ok || !emailResponse.ok || !telefoneResponse.ok || !assinanteResponse.ok) {
+                    throw new Error('Erro ao carregar os dados do usuário');
+                }
+
+                const usuarioData = await usuarioResponse.json();
+                const emailData = await emailResponse.json();
+                const telefoneData = await telefoneResponse.json();
+                const assinanteData = await assinanteResponse.json();
+
+                document.getElementById('usuario-display').textContent = usuarioData.usuario;
+                document.getElementById('email-display').textContent = emailData.email;
+                document.getElementById('telefone-display').textContent = telefoneData.telefone;
+                document.getElementById('assinante-display').textContent = assinanteData.assinante === 1 ? 'Assinante' : 'Não Assinante';
+
+            } catch (error) {
+                console.error('Erro ao carregar dados do usuário:', error);
+                alert('Erro ao carregar os dados do usuário.');
+            }
+        }
+
+        window.addEventListener('DOMContentLoaded', fetchUserData);
+
+        function toggleEdit(field) {
+            const display = document.getElementById(`${field}-display`);
+            const input = document.getElementById(`${field}-input`);
+            const button = document.getElementById(`${field}-button`);
+
+            if (display.classList.contains('d-none')) {
+                display.textContent = input.value;
+                display.classList.remove('d-none');
+                input.classList.add('d-none');
+                button.textContent = "Editar";
+                saveData(field, input.value);
+            } else {
+                display.classList.add('d-none');
+                input.classList.remove('d-none');
+                input.focus();
+                button.textContent = "Salvar";
+            }
+        }
+
+        async function saveData(field, value) {
+            try {
+                const response = await fetch(`/update${field}`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ [field]: value })
+                });
+
+                if (response.ok) {
+                    alert('Dados atualizados com sucesso!');
+                } else {
+                    const errorMsg = await response.text();
+                    alert(`Erro ao atualizar os dados: ${errorMsg}`);
+                }
+            } catch (error) {
+                console.error('Erro ao enviar dados para o servidor:', error);
+                alert('Erro ao atualizar os dados.');
+            }
+        }
+
+        function assinaturaCancel() {
+            if (confirm('Tem certeza de que deseja cancelar sua assinatura atual?')) {
+                window.location.href = '/CancelarAssinatura';
+            } else {
+                window.location.href = '/contalogado'
+            }
+        }
+    </script>
+</body>
+
+</html>
