@@ -6,12 +6,19 @@
 3. Instalação: Para instalar as dependências do projeto, use esses comandos no terminal:
 
 npm init -y
+
 npm install @google/generative-ai chalk ora prompt-sync
+
 npm install cors
+
 npm install express
+
 npm install path
+
 npm install mongodb
+
 npm install express-session
+
 npm install bcrypt
 
 5. Todas as rotas do site:
