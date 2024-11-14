@@ -21,7 +21,7 @@ npm install express-session
 
 npm install bcrypt
 
-5. Todas as rotas do site:
+4. Todas as rotas do site:
 
 http://localhost:42069/registrar
 
@@ -85,4 +85,4 @@ http://localhost:42069/sair
 
 http://localhost:42069/api/chat
 
-6. como usar nossa ia: A ideia principal da nossa IA é que a pessoa entregue a ela seu perfil (tempo livre, hobbies, se preferia trabalhar presencialmente ou a distancia, se preferia um trabalho com pouca ou muita interação social e etc) e em resposta a nossa ia apontaria o melhor curso para essa pessoa, tambem faz parte do objetivo que os alunos a usem para tirar duivdas sobre as materias que estão tendo
+5. como usar nossa ia: A ideia principal da nossa IA é que a pessoa entregue a ela seu perfil (tempo livre, hobbies, se preferia trabalhar presencialmente ou a distancia, se preferia um trabalho com pouca ou muita interação social e etc) e em resposta a nossa ia apontaria o melhor curso para essa pessoa, tambem faz parte do objetivo que os alunos a usem para tirar duivdas sobre as materias que estão tendo
