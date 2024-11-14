@@ -1,7 +1,7 @@
 # 1. Titulo do projeto: FutureMakers
  
-2. Descrição: Este projeto é um site de uma empresa que vende cursos de introdurios a diversas areas,
- o site consta com uma IA que ajuda o usuario a encontrar o curso que mais combina com ele, o cursos são profissionalizantes, então o cliente consegue uma introdução a area e ao fim ja pode começar a atuar nela. O publico alvo são pessoas que ainda não tem certeza de sua area de atuação e estam confusas com a area profissional de suas vidas 
+2. Descrição: Este projeto é um site de uma empresa que vende cursos introdutórios de diversas areas,
+ o site conta com uma IA que ajuda o usuario a encontrar o curso que mais combina com ele, os cursos são profissionalizantes, então o cliente consegue uma introdução a area e ao fim ja pode começar a atuar nela. O publico alvo são pessoas que ainda não tem certeza de sua area de atuação e estam confusas com a area profissional de suas vidas 
  
 3. Instalação: Para instalar as dependências do projeto, use esses comandos no terminal:
 
